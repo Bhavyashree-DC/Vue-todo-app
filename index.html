@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
+        integrity="sha512-HXXR0l2yMwHDrDyxJbrMD9eLvPe3z3qL3PPeozNTsiHJEENxx8DH2CxmV05iwG0dwoz5n4gQZQyYLUNt1Wdgfg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+   />
+   <link rel="stylesheet" href="style.css">
+    <title>Vue Todo App</title>
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <div class="container-main">
+              <!-- Todo List container  -->
+                <section>
+                    <!-- Calender section  -->
+                    <div class="container-list">
+                        <div class="day-header"> {{ header }}
+                            <i class="ri-calendar-todo-fill"></i>
+                        </div>                
+                    <!-- Calender end -->
+                    <!-- Task lists section -->
+                        <div class="date-header" id="dateValue"> {{ currentDate }} </div>
+                        <ul-list :tasks="tasks"></ul-list>
+                        <add-btn @add-click="toggleAddListContainer"></add-btn>
+                    </div>
+                    <!-- Task list end  -->
+                </section>
+                    <add-list-form  :show-add-list-container="showAddListContainer" @save-task="saveTask"></add-list-form>
+                <section>
+             
+                </section>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue@2"></script>
+    <script src ="app.js"></script>
+</body>
+</html>

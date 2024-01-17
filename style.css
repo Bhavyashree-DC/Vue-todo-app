@@ -1,0 +1,450 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 220%, #e9eaec 65%, #0575f3 65%);
+}
+
+.container-main {
+  max-height: 1200px;
+  padding: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 150px;
+  border-radius: 20px;
+  z-index: 2;
+  padding-top: 50px;
+}
+
+.container-list {
+  position: relative;
+  background-color: #f6f9fb;
+  width: 350px;
+  height: 800px;
+  border-radius: 25px;
+  padding: 1rem 0.8rem;
+
+}
+
+.day-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 27px;
+  font-family: "Work Sans", sans-serif;
+  padding:20px 10px 5px;
+  font-weight: 700;
+}
+
+.day-header i{
+  font-size: 2.5rem;
+  color: #1292ed;
+}
+
+.date-header {
+  font-size: 19px;
+  padding: 10px;
+  font-weight:700;
+}
+
+.time-header{
+  font-size: 15px;
+  padding: 5px 10px;
+  font-weight:700;
+  opacity: 0.6;
+  text-transform: uppercase;
+}
+
+ .todo-list-items{
+  overflow-y: auto;
+  height: 550px;
+  margin: 0px;
+  padding: 0px;
+
+}
+
+.todo-list-items ul{
+  list-style: none;
+  /* margin: 0px;
+  padding: 0px; */
+}
+
+.list-item {
+  background: white;
+  opacity: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap:20px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 1px 0px #dfdfe0;
+  margin: 10px 0px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.items{
+  display: flex;
+  align-items: center;
+  gap:26px;
+}
+
+.list-item i{
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #0575f3;
+  margin-left: auto;
+}
+
+.list-item i:hover {
+  color: #ed1212;
+  transform: translateY( -6px);
+  transition: transform 0.1s ease;
+  cursor: pointer;
+}
+
+.list-item h3{
+  margin: 6px 0px;
+}
+
+
+.list-item input[type="checkbox"]{
+  display: block;
+}
+
+.list-item:hover {
+  box-shadow: 0px 0px 5px 1px #8ccce9;
+}
+
+.listDetails {
+  cursor: pointer;
+}
+
+.edit-item{
+  border:none;
+  outline: none;
+  width:76%;
+  background-color:#fff ;
+  height: 40px;
+  color:#0575f3;
+  font-size:20px;
+  border-bottom:2px solid #0575f3;
+}
+
+.completedTask{
+  text-decoration: line-through;
+  opacity: 0.7;
+  color: lightgray;
+}
+.taskContent{
+  display: flex;
+  gap: 2rem;
+}
+
+
+.selectItems { 
+  margin-top: 20px;
+  margin-bottom: auto;
+  accent-color: #39a20a;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+
+}
+.more-options{
+  display: flex;
+  align-items: center;
+  gap:10px
+}
+/*   
+.todoName {
+  margin: 0px;
+  font: 600 15px "Work Sans", sans-serif;
+  padding: 0px;
+} */
+
+.todoType {
+  margin: 0;
+  font: 400 12px "Work Sans", sans-serif;
+  color: #bab9b9;
+}
+
+.todoTag {
+  padding: 3px 5px;
+  border-radius: 3px;
+  font: 400 10px "Work Sans", sans-serif;
+  margin-top: 7px;
+}
+
+.todoTag.high {
+  background-color: #f4e3e3;
+  color: #ed1212;
+}
+
+.todoTag.low {
+  background-color: #e3ecf4;
+  color: #1292ed;
+}
+.todoTag.medium{
+  background-color: #e5e7e8;
+  color: black;
+}
+
+.tag-div {
+  margin: 10px 0 0;
+  font-size: 14px;
+}
+
+.taskDeadLine{
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  background-color: #f7f7f7;
+  width:46px;
+  height: 48px;
+}
+
+
+.taskDeadLine .date{
+  width: 46px;
+  height:20px ;
+  text-align: center;
+  font-size: 16px;
+  padding:4px;
+  font-weight: 700;
+
+}
+.taskDeadLine .month{
+  width: 46px;
+  height:20px;
+  padding:2px 0px;
+  text-align: center;
+  background-color: #1292ed;
+  color: #fff;
+  font-size: 18px;
+}
+
+.taskDeadLine .deadlineDate{
+  background-color: #ed1212;
+}
+
+.taskDeadLine .completedDate{
+  background-color: #33821b;
+} 
+
+
+.add-item {
+  position: absolute;
+  bottom: 35px;
+  right: 35px;
+  border: none;
+  height: 70px;
+  width: 70px;
+  border-radius: 10px;
+  background-color: #0575f3;
+  color: white;
+  font-size: 30px;
+  box-shadow: 0px 0px 10px 0px #0575f3;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.submitBtn button:hover,
+.add-item:hover {
+  box-shadow: 0px 0px 16px 0px #0575f3;
+}
+
+/* Add New List  */
+
+.add-list-container {
+  width: 380px;
+  padding: 15px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  height: 800px;
+  border: none;
+  border-radius: 30px;
+  position: relative;
+
+}
+
+.close-icon {
+  position: relative;
+}
+
+.close-icon i {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.text-input,
+.projects,
+.tag-input,
+.date-input-container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 8px;
+  margin: 10px 12px;
+}
+
+.text-input label {
+  font-size: 1rem;
+  color: lightslategray;
+  font-weight: bold;
+  margin: 60px 3px 19px
+}
+
+.text-input input[type="text"] {
+  width: 320px;
+  height: 38px;
+  border-radius: 8px;
+  border: 1px solid #0575f3;
+  padding: 6px 9px;
+  font-size: 1rem;
+}
+
+.text-input input[type="text"]:hover,
+.text-input input[type="text"]:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px 0px #0575f3;
+}
+
+.projects,
+.tag-input,
+.date-input-container h4 {
+  font-size: 1rem;
+  color: lightslategray;
+  font-weight: bold;
+}
+
+.projects select {
+  width: 340px;
+  height: 53px;
+  padding: 8px 15px;
+
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(228, 232, 235);
+  outline: none;
+  border-radius: 8px;
+
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* .tag-input i {
+  font-size: 1rem;
+  font-weight: 700;
+  color: rgb(74, 154, 205);
+  cursor: pointer;
+} */
+
+/* .tag-input span {
+  font-size: 1rem;
+  font-weight: 700;
+  color: rgb(74, 154, 205);
+  padding-left: 10px;
+  cursor: pointer;
+} */
+
+.add-icons{
+   display: flex;
+   gap:10px;
+}
+
+.date-input-container input[type="date"] {
+  font-size: 1rem;
+  font-weight: 510;
+  padding: 14px 11px;
+  border: 2px solid rgb(228, 232, 235);
+  border-radius: 10px;
+  outline: none;
+}
+
+.submitBtn button {
+  width: 360px;
+  height: 70px;
+  position: absolute;
+  bottom: 35px;
+  left: 27px;
+  background-color: rgb(5, 117, 243);
+  color: white;
+  border: none;
+  box-shadow: 0px 0px 10px 0px #0575f3;
+  transition: 0.3s ease;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+input[name="tagName"]{
+  accent-color: #0575f3;
+  height: 15px;
+  width: 15px;
+}
+
+
+
+.list-item.completed.todoName {
+  opacity: 0.7;    
+}
+.list-item.completed label h4 {
+text-decoration: line-through; /* Apply line-through to the todoName */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
